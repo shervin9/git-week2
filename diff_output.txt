@@ -1,44 +1,47 @@
- <!DOCTYPE html>
- <html lang="en">
--<head>
--  <meta charset="UTF-8">
--  <meta name="viewport" content="width=device-width, initial-scale=1.0">
--  <title>DevOps Class | Online Course | GIT | WEEK2</title>
--  <link rel="stylesheet" href="styles.css">
--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
--</head>
--<body>
--  <nav class="navbar">
--    <div class="nav-brand">DevOps Class</div>
--    <div class="nav-links">
--      <a href="#home">Home</a>
--      <a href="#about">About</a>
--      <a href="#contributors">Contributors</a>
--    </div>
--  </nav>
--
--  <section id="home" class="hero">
--    <div class="hero-content">
--      <h1>Welcome to DevOps</h1>
--      <p class="subtitle">Where Code Meets Operations</p>
--      <div class="cta-buttons">
--        <button class="btn primary">Get Started</button>
--        <button class="btn secondary">Learn More</button>
-+  <head>
-+    <meta charset="UTF-8">
-+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-+    <title>DevOps Class | Online Course | GIT | WEEK2</title>
-+    <link rel="stylesheet" href="styles.css">
-+    <link rel="stylesheet"
-+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-+  </head>
-+  <body>
-+    <nav class="navbar">
-+      <div class="nav-brand">DevOps Class</div>
-+      <div class="nav-links">
-+        <a href="#home">Home</a>
-+        <a href="#about">About</a>
-+        <a href="#contributors">Contributors</a>
-       </div>
--    </div>
--  </section>
+diff --git a/git-week2 b/git-week2
+new file mode 160000
+index 0000000..88a11e6
+--- /dev/null
++++ b/git-week2
+@@ -0,0 +1 @@
++Subproject commit 88a11e652255cf5276179e5dd17f2341d84e07f6
+diff --git a/index.html b/index.html
+index 08a6ff9..edaa486 100644
+--- a/index.html
++++ b/index.html
+@@ -68,7 +68,10 @@
+               <a href="#" class="social-link"><i
+                   class="fab fa-linkedin"></i></a>
+             </div>
++          </div>
++        </div>
+ 
++<<<<<<< HEAD
+             <div class="contributor-card">
+               <div class="contributor-avatar">
+                 <i class="fas fa-user"></i>
+@@ -129,6 +132,24 @@
+ </html>
+ =======
+  
++=======
++        <div class="contributors-grid" id="contributors">
++          <div class="contributor-card">
++            <div class="contributor-avatar">
++              <i class="fas fa-user"></i>
++            </div>
++            <h3>Aref</h3>
++
++            <p>Junior DevOps Engineer</p>
++            <div class="contributor-links">
++              <a href="#" class="social-link"><i class="fab fa-github"></i></a>
++              <a href="#" class="social-link"><i
++                  class="fab fa-linkedin"></i></a>
++            </div>
++          </div>
++        </div>
++
++>>>>>>> 88a11e652255cf5276179e5dd17f2341d84e07f6
+               <div class="contributor-card">
+                 <div class="contributor-avatar">
+                   <i class="fas fa-user"></i>
