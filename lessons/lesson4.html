@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 1: Basic Branching | Git Branching Mastery</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    .lesson-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .code-block {
+      background: rgba(0, 0, 0, 0.2);
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+      font-family: 'Courier New', monospace;
+      overflow-x: auto;
+    }
+
+    .navigation {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-btn {
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      color: var(--text-color);
+      background: var(--card-bg);
+      transition: var(--transition);
+    }
+
+    .nav-btn:hover {
+      background: var(--primary-color);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand">Git Branching Mastery</div>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#lessons">Lessons</a>
+      <a href="../index.html#contributors">Contributors</a>
+    </div>
+  </nav>
+
+  <div class="lesson-content">
+    <h1>Lesson 4: Basic Branching</h1>
+    <p class="subtitle">Learn how to create and switch between branches</p>
+
+    <h2>What is a Branch?</h2>
+    <p>A branch in Git is a lightweight movable pointer to one of your commits. It's essentially a way to create a new line of development that can be worked on independently.</p>
+
+    <h2>Creating a New Branch</h2>
+    <p>To create a new branch, use the following command:</p>
+    <div class="code-block">
+      git branch feature/new-feature
+    </div>
+
+    <h2>Switching Between Branches</h2>
+    <p>To switch to a different branch, use:</p>
+    <div class="code-block">
+      git checkout feature/new-feature
+    </div>
+
+    <h2>Creating and Switching in One Command</h2>
+    <p>You can create and switch to a new branch in one command:</p>
+    <div class="code-block">
+      git checkout -b feature/new-feature
+    </div>
+
+    <h2>Viewing All Branches</h2>
+    <p>To see all branches in your repository:</p>
+    <div class="code-block">
+      git branch
+    </div>
+
+    <h2>Best Practices</h2>
+    <ul>
+      <li>Use descriptive branch names</li>
+      <li>Create branches for new features or bug fixes</li>
+      <li>Keep branches up to date with the main branch</li>
+      <li>Delete branches after they're merged</li>
+    </ul>
+
+    <div class="navigation">
+      <a href="#" class="nav-btn disabled">Previous Lesson</a>
+      <a href="lesson2.html" class="nav-btn">Next Lesson: Branch Management</a>
+    </div>
+  </div>
+</body>
+</html>
