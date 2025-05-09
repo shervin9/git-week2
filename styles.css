@@ -12,6 +12,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-align: right;
 }
 
 body {
@@ -371,4 +372,20 @@ footer {
 
 .lesson-content tr:last-child td {
   border-bottom: none;
+}
+
+
+ 
+
+h2, ul {
+  animation: fadeIn 0.5s; 
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
 }

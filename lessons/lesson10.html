@@ -1,10 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 <head>
-  <meta charset="UTF-8">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Rebase در Git</title>
+    <link rel="stylesheet" href="styles.css"> 
 </head>
 <body>
-  <h1>lesson10</h1>
+    <header>
+        <h1>Interactive Rebase در Git</h1>
+        <p>مدیریت تاریخچه‌ی گیت به صورت مؤثرتر!</p>
+    </header>
+
+    <section>
+        <h2>تعریف Interactive Rebase</h2>
+        <p>Interactive Rebase یک قابلیت در سیستم کنترل نسخه‌ی گیت است که به شما امکان می‌دهد تغییرات ثبت‌شده (commits) را ویرایش، حذف یا ترکیب کنید. این ویژگی به شما اجازه می‌دهد تا تاریخچه‌ی پروژه‌ی خود را مرتب‌تر و معنادارتر کنید.</p>
+    </section>
+
+    <section>
+        <h2>چرا از Interactive Rebase استفاده کنیم؟</h2>
+        <ul>
+            <li><strong>تنظیم تاریخچه:</strong> با استفاده از Interactive Rebase می‌توانید تاریخچه‌ی commits را به گونه‌ای ساماندهی کنید که مفهوم بهتری از تغییرات ایجاد شده در پروژه ارائه دهد.</li>
+            <li><strong>ترکیب commits:</strong> این قابلیت به شما اجازه می‌دهد تا چندین commit مرتبط را ترکیب کنید و به یک commit تغییر دهید، که می‌تواند تاریخچه را تمیزتر کند.</li>
+            <li><strong>ویرایش commits:</strong> می‌توانید پیام commit را ویرایش کنید یا اطلاعات اضافه‌ای به commits قدیمی بیفزایید.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>نحوه‌ی استفاده از Interactive Rebase</h2>
+        <ol>
+            <li>ورود به دستور rebase:
+                <pre><code>git rebase -i HEAD~n</code></pre>
+                در این جا <code>n</code> تعداد commits اخیر است که می‌خواهید بر روی آن‌ها کار کنید.
+            </li>
+            <li>یک ویرایشگر متن باز می‌شود، جایی که می‌توانید عمل‌کردهای مختلف مانند <code>pick</code>، <code>squash</code>، و <code>edit</code> را برای commits مشخص کنید.</li>
+            <li>سپس تغییرات را ذخیره کنید و به گیت بگویید که فرآیند rebase را ادامه دهد.</li>
+            <li>در نهایت، اگر هیچ تعارضی وجود نداشته باشد، فرآیند به پایان می‌رسد.</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>مزایای استفاده از Interactive Rebase</h2>
+        <ul>
+            <li>ایجاد تاریخچه‌ای واضح و معنادار.</li>
+            <li>بهینه‌سازی مراحل توسعه.</li>
+            <li>مدیریت تعارضات به‌صورت مؤثر.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>برای اطلاعات بیشتر، به مستندات گیت مراجعه کنید.</p>
+    </footer>
 </body>
-</html> 
+</html>
