@@ -11,17 +11,8 @@
       max-width: 800px;
       margin: 0 auto;
       padding: 2rem;
+      padding-top: 6rem; /* To avoid overlap with fixed navbar */
     }
-    
-    .code-block {
-      background: rgba(0, 0, 0, 0.2);
-      padding: 1.5rem;
-      border-radius: 8px;
-      margin: 1.5rem 0;
-      font-family: 'Courier New', monospace;
-      overflow-x: auto;
-    }
-    
     .navigation {
       display: flex;
       justify-content: space-between;
@@ -29,7 +20,6 @@
       padding-top: 2rem;
       border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
-    
     .nav-btn {
       padding: 0.8rem 1.5rem;
       border-radius: 8px;
@@ -38,10 +28,13 @@
       background: var(--card-bg);
       transition: var(--transition);
     }
-    
     .nav-btn:hover {
       background: var(--primary-color);
       transform: translateY(-2px);
+    }
+    .nav-btn.disabled {
+      pointer-events: none;
+      opacity: 0.5;
     }
   </style>
 </head>
@@ -60,9 +53,14 @@
     <p class="subtitle">Learn how to create and switch between branches</p>
 
     <h2>What is Cherry-Picking in Git?</h2>
+    <img src="../cherry-pick-diagram.png" alt="Diagram showing cherry-picking in Git" class="diagram" />
     <p>
-      Cherry-picking in Git is the process of selecting a specific commit from one branch and applying it to another branch. Unlike merging or rebasing, which typically involve integrating multiple commits or entire branches, cherry-picking allows you to apply individual commits selectively. This is useful when you want to incorporate a particular change-such as a bug fix or a feature update-without merging all the changes from the source branch.
+      <b>Cherry-picking</b> in Git is the process of selecting a specific commit from one branch and applying it to another branch. Unlike merging or rebasing, which typically involve integrating multiple commits or entire branches, cherry-picking allows you to apply individual commits selectively. This is useful when you want to incorporate a particular change-such as a bug fix or a feature update-without merging all the changes from the source branch.
     </p>
+
+    <div class="info-box">
+      <strong>Did you know?</strong> You can cherry-pick multiple commits at once using a range: <code>git cherry-pick A^..B</code>
+    </div>
 
     <h2>How to Cherry-Pick a Commit</h2>
     <p>The command used is:</p>
@@ -73,6 +71,15 @@
       Here, <code>&lt;commit-hash&gt;</code> is the unique identifier of the commit you want to apply. When you run this command on your current branch, Git copies the changes from the specified commit and creates a new commit on your branch with those changes, but with a new commit hash. This keeps the commit history clean and precise.
     </p>
 
+    <h3>Example Scenario</h3>
+    <p>
+      Suppose you fixed a bug on the <code>feature/login-bugfix</code> branch and want to apply that fix to <code>main</code> without merging other changes:
+    </p>
+    <div class="code-block">
+      git checkout main<br>
+      git cherry-pick a1b2c3d4
+    </div>
+
     <h2>Common Use Cases for Cherry-Picking</h2>
     <ul>
       <li>Backporting bug fixes from a development branch to a stable or release branch.</li>
@@ -80,6 +87,33 @@
       <li>Correcting commits accidentally made to the wrong branch.</li>
       <li>Reusing specific changes across multiple branches without merging entire branches.</li>
     </ul>
+
+    <h3>Cherry-Picking: Pros and Cons</h3>
+    <table>
+      <tr>
+        <th>Pros</th>
+        <th>Cons</th>
+      </tr>
+      <tr>
+        <td>Granular control over changes</td>
+        <td>Can cause duplicate commits if not careful</td>
+      </tr>
+      <tr>
+        <td>Avoids merging unwanted changes</td>
+        <td>May lead to conflicts</td>
+      </tr>
+    </table>
+
+    <div class="quiz-box">
+      <strong>Quick Quiz:</strong>
+      <p>Which command applies a specific commit from another branch to your current branch?</p>
+      <ul>
+        <li>A. <code>git merge</code></li>
+        <li>B. <code>git cherry-pick</code></li>
+        <li>C. <code>git rebase</code></li>
+      </ul>
+      <p><em>Answer: B</em></p>
+    </div>
 
     <p>
       Cherry-picking can be done for single commits, multiple commits, or a range of commits, and it can also be applied to commits from remote branches by fetching them first.
