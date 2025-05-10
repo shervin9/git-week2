@@ -3,9 +3,92 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>Lesson 1: HTML Basics</title>
+        <!-- More descriptive title -->
+        <style>
+            /* Improved CSS with better organization and variables */
+            :root {
+                --primary-color: #2c3e50;
+                --secondary-color: #f9f9f9;
+                --spacing-unit: 1rem;
+            }
+
+            body {
+                font-family: "Arial", sans-serif;
+                line-height: 1.6;
+                color: #333;
+                background-color: var(--secondary-color);
+                padding: 2rem;
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            .lesson-title {
+                color: var(--primary-color);
+                text-decoration: underline;
+                text-align: center;
+                margin-bottom: calc(var(--spacing-unit) * 1.5);
+            }
+
+            section {
+                background-color: white;
+                padding: var(--spacing-unit);
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+            code {
+                background-color: #f0f0f0;
+                padding: 0.2rem 0.4rem;
+                border-radius: 4px;
+                font-family: "Courier New", monospace;
+            }
+
+            ul {
+                padding-left: 1.5rem;
+            }
+
+            li {
+                margin-bottom: 0.5rem;
+            }
+        </style>
     </head>
     <body>
-        <p>Hi, this is Arghavan</p>
+        <header>
+            <h1 class="lesson-title">Lesson 1: HTML Basics</h1>
+        </header>
+
+        <main>
+            <section>
+                <h2>Introduction</h2>
+                <!-- Added heading for better structure -->
+                <p>Master the building blocks of web development!</p>
+
+                <h3>Key Concepts</h3>
+                <!-- Added subheading -->
+                <ul>
+                    <li>
+                        <strong>Tags</strong>: Define structure (e.g.,
+                        <code>&lt;p&gt;</code>, <code>&lt;div&gt;</code>).
+                    </li>
+                    <li><strong>Elements</strong>: Tags + content.</li>
+                    <li>
+                        <strong>Attributes</strong>: Provide additional
+                        information about elements (e.g., <code>class</code>,
+                        <code>id</code>).
+                    </li>
+                    <li>
+                        <strong>Document Structure</strong>:
+                        <code>DOCTYPE</code>, <code>html</code>,
+                        <code>head</code>, <code>body</code>.
+                    </li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2025 arghavan</p>
+            <!-- Added footer -->
+        </footer>
     </body>
 </html>
