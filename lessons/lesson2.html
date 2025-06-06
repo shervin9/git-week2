@@ -1,12 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 2: Branch Management</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    .lesson-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    
+    .code-block {
+      background: rgba(0, 0, 0, 0.2);
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+      font-family: 'Courier New', monospace;
+      overflow-x: auto;
+    }
+    
+    .navigation {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .nav-btn {
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      color: var(--text-color);
+      background: var(--card-bg);
+      transition: var(--transition);
+    }
+    
+    .nav-btn:hover {
+      background: var(--primary-color);
+      transform: translateY(-2px);
+    }
+  </style>
 </head>
 <body>
-    <h2>Hey, I'm Adib</h2>
-    <h3>We are learnig git branching</h3>
+  <nav class="navbar">
+    <div class="nav-brand">Git Branching Mastery</div>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#lessons">Lessons</a>
+      <a href="../index.html#contributors">Contributors</a>
+    </div>
+  </nav>
+
+  <div class="lesson-content">
+    <br><br><br>
+    <h1>Lesson 2: Branch Management</h1>
+    <p class="subtitle">Learn how to manage your branches.</p>
+    
+
+    <h2>List all of your branches</h2>
+    <p>There are 2 kinds of branches:<br/>
+        <ol>
+            <li><b>Local branch</b></li>
+            <li><b>Remote branch</b></li>
+        </ol><br/>
+        The local branches exist only on your own system.<br/> The remote branches are the ones which have been pushed to Github and you can see them in branch section on your Github repository</p>
+    <p>To list both, use the bellow command:</p>
+    <div class="code-block">
+      git branch -a
+    </div>
+
+    <h2>List your local branches</h2>
+    <p>To list your local branches use the following command:</p>
+    <div class="code-block">
+        git branch
+      </div>
+
+    
+    <h2>List only the remote branches</h2>
+    <p>To list the remote branches, use the following command:</p>
+    <div class="code-block">
+      git branch -r
+    </div>
+    
+    <h2>Rename the local branch</h2>
+    <p>If you are on the branch you want to rename:</p>
+    <div class="code-block">
+        git branch -m new-branch-name
+    </div>
+    <p>If you are on a different branch:</p>
+    <div class="code-block">
+        git branch -m old-branch-name new-branch-name
+    </div>
+    
+    <h2>Update the remote branch</h2>
+    <p>After renaming locally, push the new branch to the remote and delete the old branch:</p>
+    <div class="code-block">
+        git push origin -u new-branch-name
+        <br/>
+        git push origin --delete old-branch-name
+    </div>
+    
+    <div class="navigation">
+      <a href="lesson1.html" class="nav-btn disabled">Previous Lesson: Basic Branching</a>
+      <a href="lesson3.html" class="nav-btn">Next Lesson: Merging Basics</a>
+    </div>
+  </div>
 </body>
-</html>
+</html> 
